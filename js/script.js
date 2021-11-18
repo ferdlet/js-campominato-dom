@@ -18,11 +18,22 @@ for (let i = 0; i < 100; i++) {
     cell.addEventListener('click', function () {
         if (bombs.includes(parseInt(this.innerHTML))) {
             this.classList.add('red');
+            let rivelaBombs = document.getElementsByClassName('square');
+            for (i = 0; i < cellNumber; i++) {
+                if (bombs.includes(parseInt(rivelaBombs[i].innerHTML))) {
+                    rivelaBombs[i].classList.add('red');
+                }
+            }
             alert('Hai perso!');
-            window.location.reload()
+            window.location.reload();
         } else {
-        cell.classList.add('clicked-true');
-        }
+            cell.classList.add('clicked-true');
+            const clicked = document.getElementsByClassName('clicked-true');
+            if (clicked.length == cellNumber - bombsNumber) {
+                alert('Hai vinto!');
+            }
+            
+        };
     });
     
     container.appendChild(cell);
@@ -48,11 +59,22 @@ buttonGioca.addEventListener("click", function () {
                 cell.addEventListener('click', function () {
                     if (bombs.includes(parseInt(this.innerHTML))) {
                         this.classList.add('red');
+                        let rivelaBombs = document.getElementsByClassName('square');
+                        for (i = 0; i < cellNumber; i++) {
+                            if (bombs.includes(parseInt(rivelaBombs[i].innerHTML))) {
+                                rivelaBombs[i].classList.add('red');
+                            }
+                        }
                         alert('Hai perso!');
-                        window.location.reload()
+                        window.location.reload();
                     } else {
                         cell.classList.add('clicked-true');
-                    }
+                        const clicked = document.getElementsByClassName('clicked-true');
+                        if (clicked.length == cellNumber - bombsNumber) {
+                            alert('Hai vinto!');
+                        }
+                    };
+                    
                 });
                 container.appendChild(cell);
             }
@@ -68,11 +90,21 @@ buttonGioca.addEventListener("click", function () {
                 cell.addEventListener('click', function () {
                     if (bombs.includes(parseInt(this.innerHTML))) {
                         this.classList.add('red');
+                        let rivelaBombs = document.getElementsByClassName('square');
+                        for (i = 0; i < cellNumber; i++) {
+                            if (bombs.includes(parseInt(rivelaBombs[i].innerHTML))) {
+                                rivelaBombs[i].classList.add('red');
+                            }
+                        }
                         alert('Hai perso!');
-                        window.location.reload()
+                        window.location.reload();
                     } else {
                         cell.classList.add('clicked-true');
-                    }
+                        const clicked = document.getElementsByClassName('clicked-true');
+                        if (clicked.length == cellNumber - bombsNumber) {
+                            alert('Hai vinto!');
+                        }
+                    };
                 });
                 container.appendChild(cell);  
             }
@@ -88,11 +120,21 @@ buttonGioca.addEventListener("click", function () {
                 cell.addEventListener('click', function(){
                     if (bombs.includes(parseInt(this.innerHTML))) {
                         this.classList.add('red');
+                        let rivelaBombs = document.getElementsByClassName('square');
+                        for (i = 0; i < cellNumber; i++) {
+                            if (bombs.includes(parseInt(rivelaBombs[i].innerHTML))) {
+                                rivelaBombs[i].classList.add('red');
+                            }
+                        }
                         alert('Hai perso!');
-                        window.location.reload()
+                        window.location.reload();
                     } else {
                         cell.classList.add('clicked-true');
-                    }
+                        const clicked = document.getElementsByClassName('clicked-true');
+                        if (clicked.length == cellNumber - bombsNumber) {
+                            alert('Hai vinto!');
+                        }
+                    };
                 });
                 container.appendChild(cell);
 
@@ -100,6 +142,8 @@ buttonGioca.addEventListener("click", function () {
             break;
     }
 });
+
+
 
 function generateBombs() {
     const arrayBombs = [];
