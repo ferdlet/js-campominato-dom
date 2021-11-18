@@ -18,6 +18,8 @@ for (let i = 0; i < 100; i++) {
     cell.addEventListener('click', function () {
         if (bombs.includes(parseInt(this.innerHTML))) {
             this.classList.add('red');
+            alert('Hai perso!');
+            window.location.reload()
         } else {
         cell.classList.add('clicked-true');
         }
@@ -46,6 +48,8 @@ buttonGioca.addEventListener("click", function () {
                 cell.addEventListener('click', function () {
                     if (bombs.includes(parseInt(this.innerHTML))) {
                         this.classList.add('red');
+                        alert('Hai perso!');
+                        window.location.reload()
                     } else {
                         cell.classList.add('clicked-true');
                     }
@@ -64,6 +68,8 @@ buttonGioca.addEventListener("click", function () {
                 cell.addEventListener('click', function () {
                     if (bombs.includes(parseInt(this.innerHTML))) {
                         this.classList.add('red');
+                        alert('Hai perso!');
+                        window.location.reload()
                     } else {
                         cell.classList.add('clicked-true');
                     }
@@ -82,6 +88,8 @@ buttonGioca.addEventListener("click", function () {
                 cell.addEventListener('click', function(){
                     if (bombs.includes(parseInt(this.innerHTML))) {
                         this.classList.add('red');
+                        alert('Hai perso!');
+                        window.location.reload()
                     } else {
                         cell.classList.add('clicked-true');
                     }
