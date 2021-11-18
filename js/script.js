@@ -58,32 +58,37 @@ buttonGioca.addEventListener("click", function () {
                     cell.classList.add('clicked-true');
                 });
                 container.appendChild(cell);
+
             }
             break;
     }
 });
 
-function generateBombs() {
-    const arrayBombs = [];
-    while (arrayBombs.length < bombsNumber) {
-        const numeroRandom = getRndInteger(1, cellNumber);
-        if (!arrayBombs.includes(numeroRandom)) {
-            arrayBombs.push(numeroRandom);
-        }
-    }
-    return arrayBombs;
-}
 
-function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+// const bombs = generateBombs();
+// console.log(bombs);
 
-const square = document.querySelector('.square');
+// function generateBombs() {
+//     const arrayBombs = [];
+//     while (arrayBombs.length < bombsNumber) {
+//         const numeroRandom = getRndInteger(1, cellNumber);
+//         if (!arrayBombs.includes(numeroRandom)) {
+//             arrayBombs.push(numeroRandom);
+//         }
+//     }
+//     return arrayBombs;
+// }
 
-for (let i = 1; i <= cellNumber; i++) {
-    if (i == bombs[i]) {
-        square[i].addEventListener('click', function () {
-            square[i].classList.add('red');
-        });
-    }
-}
+// function getRndInteger(min, max) {
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+
+// const square = document.querySelector('.square');
+
+// for (let i = 1; i <= cellNumber; i++) {
+//     if (i == bombs[i]) {
+//         square[i].addEventListener('click', function () {
+//             square[i].classList.add('red');
+//         });
+//     }
+// }
