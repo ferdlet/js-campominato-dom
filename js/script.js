@@ -31,6 +31,8 @@ for (let i = 0; i < 100; i++) {
             const clicked = document.getElementsByClassName('clicked-true');
             if (clicked.length == cellNumber - bombsNumber) {
                 alert('Hai vinto!');
+                window.location.reload();
+
             }
             
         };
@@ -72,6 +74,8 @@ buttonGioca.addEventListener("click", function () {
                         const clicked = document.getElementsByClassName('clicked-true');
                         if (clicked.length == cellNumber - bombsNumber) {
                             alert('Hai vinto!');
+                            window.location.reload();
+
                         }
                     };
                     
@@ -103,6 +107,8 @@ buttonGioca.addEventListener("click", function () {
                         const clicked = document.getElementsByClassName('clicked-true');
                         if (clicked.length == cellNumber - bombsNumber) {
                             alert('Hai vinto!');
+                            window.location.reload();
+
                         }
                     };
                 });
@@ -133,6 +139,8 @@ buttonGioca.addEventListener("click", function () {
                         const clicked = document.getElementsByClassName('clicked-true');
                         if (clicked.length == cellNumber - bombsNumber) {
                             alert('Hai vinto!');
+                            window.location.reload();
+
                         }
                     };
                 });
