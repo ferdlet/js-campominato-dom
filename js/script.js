@@ -24,10 +24,11 @@ for (let i = 0; i < 100; i++) {
                     rivelaBombs[i].classList.add('red');
                 }
             }
-            alert('Hai perso!');
+            alert('Hai perso! Numero di tentativi ' + arrayAttemps.length);
             window.location.reload();
         } else {
             cell.classList.add('clicked-true');
+            arrayAttemps.push(i);
             const clicked = document.getElementsByClassName('clicked-true');
             if (clicked.length == cellNumber - bombsNumber) {
                 alert('Hai vinto!');
@@ -67,10 +68,11 @@ buttonGioca.addEventListener("click", function () {
                                 rivelaBombs[i].classList.add('red');
                             }
                         }
-                        alert('Hai perso!');
+                        alert('Hai perso! Numero di tentativi ' + arrayAttemps.length);
                         window.location.reload();
                     } else {
                         cell.classList.add('clicked-true');
+                        arrayAttemps.push(i);
                         const clicked = document.getElementsByClassName('clicked-true');
                         if (clicked.length == cellNumber - bombsNumber) {
                             alert('Hai vinto!');
@@ -100,10 +102,11 @@ buttonGioca.addEventListener("click", function () {
                                 rivelaBombs[i].classList.add('red');
                             }
                         }
-                        alert('Hai perso!');
+                        alert('Hai perso! Numero di tentativi ' + arrayAttemps.length);
                         window.location.reload();
                     } else {
                         cell.classList.add('clicked-true');
+                        arrayAttemps.push(i);
                         const clicked = document.getElementsByClassName('clicked-true');
                         if (clicked.length == cellNumber - bombsNumber) {
                             alert('Hai vinto!');
@@ -132,10 +135,11 @@ buttonGioca.addEventListener("click", function () {
                                 rivelaBombs[i].classList.add('red');
                             }
                         }
-                        alert('Hai perso!');
+                        alert('Hai perso! Numero di tentativi ' + arrayAttemps.length);
                         window.location.reload();
                     } else {
                         cell.classList.add('clicked-true');
+                        arrayAttemps.push(i);
                         const clicked = document.getElementsByClassName('clicked-true');
                         if (clicked.length == cellNumber - bombsNumber) {
                             alert('Hai vinto!');
@@ -167,3 +171,6 @@ function generateBombs() {
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+
+const arrayAttemps = [];
